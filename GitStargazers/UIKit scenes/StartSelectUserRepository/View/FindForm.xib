@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchFormView" customModule="GitStargazers" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="GOa-NL-2PY" id="mB8-QB-Gz5"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="wMI-5x-mRx"/>
+                <outlet property="ownerTextField" destination="78L-HY-Ozv" id="CLi-i9-h1r"/>
+                <outlet property="repositoryTextField" destination="Io8-HF-VaK" id="Y2Y-h0-2Fh"/>
+                <outlet property="searchButton" destination="LU7-nq-xD3" id="Rta-Pw-mer"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="305"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="urc-g8-zAl">
+                    <rect key="frame" x="38.5" y="34" width="300" height="101"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Io8-HF-VaK">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="jdw-xn-OXo"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="aTe-vz-sqO"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="78L-HY-Ozv">
+                            <rect key="frame" x="0.0" y="61" width="300" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="sD4-5z-lGX"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" textContentType="username"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Mx4-HX-clz"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" priority="750" constant="300" id="7bU-Gw-NpJ"/>
+                        <constraint firstAttribute="height" constant="101" id="WuU-Nh-gDi"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-nq-xD3">
+                    <rect key="frame" x="50" y="205" width="277" height="50"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="L1R-vq-xYs"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="Qtc-El-4HX"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="mZb-kY-Jsq"/>
+                    </constraints>
+                    <state key="normal" title="Cerca">
+                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="searchAction:" destination="-1" eventType="touchUpInside" id="vMV-Fe-gpA"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="GOa-NL-2PY">
+                    <rect key="frame" x="291" y="205" width="20" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="5ZR-ne-OhV"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="LU7-nq-xD3" firstAttribute="top" secondItem="urc-g8-zAl" secondAttribute="bottom" constant="70" id="AQt-8w-vFm"/>
+                <constraint firstItem="GOa-NL-2PY" firstAttribute="bottom" secondItem="LU7-nq-xD3" secondAttribute="bottom" id="AsR-0D-ZPb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LU7-nq-xD3" secondAttribute="bottom" priority="750" constant="30" id="JPb-HN-lqI"/>
+                <constraint firstItem="GOa-NL-2PY" firstAttribute="leading" secondItem="LU7-nq-xD3" secondAttribute="trailing" constant="-36" id="ZfH-Nv-bTa"/>
+                <constraint firstItem="urc-g8-zAl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="dhc-an-s4l"/>
+                <constraint firstItem="GOa-NL-2PY" firstAttribute="top" secondItem="LU7-nq-xD3" secondAttribute="top" id="hce-9s-9mm"/>
+                <constraint firstItem="LU7-nq-xD3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="izR-hq-GRs"/>
+                <constraint firstItem="urc-g8-zAl" firstAttribute="centerX" secondItem="LU7-nq-xD3" secondAttribute="centerX" id="s0b-rg-XEx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="rx6-T7-IJd" appends="YES" id="lVr-hc-F1p"/>
+            </connections>
+            <point key="canvasLocation" x="60.791366906474828" y="164.07035175879398"/>
+        </view>
+        <tapGestureRecognizer id="rx6-T7-IJd">
+            <connections>
+                <action selector="touchView:" destination="-1" id="m74-cB-OyO"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

@@ -1,0 +1,14 @@
+/* 
+  italiano.strings
+  GitStargazers
+
+  Created by YLAPP on 17/01/2019.
+  Copyright © 2019 YLAPP. All rights reserved.
+*/
+
+"search" = "Cerca";
+"insert_github_repository_name_you_want" = "Inserisci il nome del Repository Github";
+"repository_not_found" = "Repository non trovato";
+"end_of_stargazers_for_the_repo" = "Nessuno stargazers da visualizzare per la repository";
+"insert_owner" = "Inserire Owner del repository";
+"select_repository" = "Stargazers del repository Github";

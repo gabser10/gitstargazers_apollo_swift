@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TPs-9u-FF1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Stargazer View Controller-->
+        <scene sceneID="AS6-Ja-jiF">
+            <objects>
+                <viewController id="yJQ-Zt-O5d" customClass="ListStargazerViewController" customModule="GitStargazers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n14-27-qgr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-L2-jZz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stargazerCell" id="o3n-0G-L7k" customClass="StargazerTableViewCell" customModule="GitStargazers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o3n-0G-L7k" id="Taw-fw-GXq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhL-0q-9wo" customClass="StargazerView" customModule="GitStargazers" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GhL-0q-9wo" firstAttribute="top" secondItem="Taw-fw-GXq" secondAttribute="top" id="4z0-VW-Evd"/>
+                                                <constraint firstAttribute="bottom" secondItem="GhL-0q-9wo" secondAttribute="bottom" id="7SN-6E-cEG"/>
+                                                <constraint firstAttribute="trailing" secondItem="GhL-0q-9wo" secondAttribute="trailing" id="eSh-be-VqB"/>
+                                                <constraint firstItem="GhL-0q-9wo" firstAttribute="leading" secondItem="Taw-fw-GXq" secondAttribute="leading" id="v9w-8t-CNz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stargazersView" destination="GhL-0q-9wo" id="JAn-st-LhR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yJQ-Zt-O5d" id="vNm-hF-Wcm"/>
+                                    <outlet property="delegate" destination="yJQ-Zt-O5d" id="W8V-Fc-oZC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8KJ-L2-jZz" firstAttribute="leading" secondItem="EAE-Xd-Shg" secondAttribute="leading" id="QpG-PD-yQj"/>
+                            <constraint firstItem="8KJ-L2-jZz" firstAttribute="top" secondItem="EAE-Xd-Shg" secondAttribute="top" id="VeA-JG-YCt"/>
+                            <constraint firstItem="8KJ-L2-jZz" firstAttribute="trailing" secondItem="EAE-Xd-Shg" secondAttribute="trailing" id="r1g-kF-1d0"/>
+                            <constraint firstItem="8KJ-L2-jZz" firstAttribute="bottom" secondItem="EAE-Xd-Shg" secondAttribute="bottom" id="vWc-bt-iba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EAE-Xd-Shg"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="8KJ-L2-jZz" id="uty-I6-iTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6P0-2R-N0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="-591"/>
+        </scene>
+        <!--Select Repository-->
+        <scene sceneID="aX4-pB-AU3">
+            <objects>
+                <viewController id="uun-5m-jXU" customClass="SelectRepositoryViewController" customModule="GitStargazers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SAs-hX-oj1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWv-hu-uqx" customClass="SearchFormView" customModule="GitStargazers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="148" width="335" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="467" id="7ef-mR-wCy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TWv-hu-uqx" firstAttribute="top" secondItem="lPs-dh-BS0" secondAttribute="top" constant="50" id="8c1-E1-xym"/>
+                            <constraint firstItem="lPs-dh-BS0" firstAttribute="trailing" secondItem="TWv-hu-uqx" secondAttribute="trailing" constant="20" id="Abl-1c-bm6"/>
+                            <constraint firstItem="TWv-hu-uqx" firstAttribute="leading" secondItem="lPs-dh-BS0" secondAttribute="leading" constant="20" id="sMe-Zh-5L8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lPs-dh-BS0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Repository" prompt="GitHub" id="hRh-Lj-dXO"/>
+                    <connections>
+                        <outlet property="searchForm" destination="TWv-hu-uqx" id="Eou-YL-fGn"/>
+                        <segue destination="yJQ-Zt-O5d" kind="show" identifier="toMaster" id="a4j-d8-Pf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhX-FI-vy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1884" y="-1289"/>
+        </scene>
+        <!--Nav Controller-->
+        <scene sceneID="d5L-gw-9qI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPs-9u-FF1" customClass="GSNavController" customModule="GitStargazers" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6bS-H6-sJ3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uun-5m-jXU" kind="relationship" relationship="rootViewController" id="7bb-Ja-rNP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxS-E1-U00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2756" y="-1288"/>
+        </scene>
+    </scenes>
+</document>

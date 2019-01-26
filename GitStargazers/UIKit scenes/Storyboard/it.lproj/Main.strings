@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Detail view content goes here"; ObjectID = "0XM-y9-sOw"; */
+"0XM-y9-sOw.text" = "Detail view content goes here";
+
+/* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
+"JEX-9P-axG.title" = "Detail";
+
+/* Class = "UINavigationItem"; title = "Detail"; ObjectID = "mOI-FS-AaM"; */
+"mOI-FS-AaM.title" = "Detail";
